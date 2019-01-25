@@ -1,0 +1,4 @@
+websocket:
+  server:
+    host-name: localhost
+    port: 8887
