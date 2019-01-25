@@ -28,17 +28,17 @@ public class ClientServiceImpl implements ClientService {
             emptyClient.reconnect();
             log.info("重连");
             // 再次订阅trade
-//            try {
-//                // 等待连接成功
-//                Thread.sleep(1000*2);
-//            } catch (InterruptedException e1) {
-//                e1.printStackTrace();
-//            }
-//            TradeSub tradeSub = new TradeSub();
-//            tradeSub.setType("subscribed-trade");
-//            tradeSub.setSymbol("HUOBI/BYC_USDT");
-//            emptyClient.send(JsonUtils.serialize(tradeSub));
-//            log.info("再次订阅");
+            try {
+                // 等待连接成功
+                Thread.sleep(1000*2);
+            } catch (InterruptedException e1) {
+                e1.printStackTrace();
+            }
+            TradeSub tradeSub = new TradeSub();
+            tradeSub.setType("subscribed-trade");
+            tradeSub.setSymbol("HUOBI/BYC_USDT");
+            emptyClient.send(JsonUtils.serialize(tradeSub));
+            log.info("再次订阅");
         }
 
     }

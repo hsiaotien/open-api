@@ -25,10 +25,10 @@ public class SetUp implements ApplicationRunner {
         emptyClient.connect();
         log.info("连接");
         // 订阅trade
-//        TradeSub tradeSub = new TradeSub();
-//        tradeSub.setType("subscribed-trade");
-//        tradeSub.setSymbol("HUOBI/BYC_USDT");
-//        clientService.subTrade(tradeSub);
-//        log.info("订阅subTrade");
+        TradeSub tradeSub = new TradeSub();
+        tradeSub.setType("subscribed-trade");
+        tradeSub.setSymbol("HUOBI/BYC_USDT");
+        clientService.subTrade(tradeSub);
+        log.info("订阅subTrade");
     }
 }
